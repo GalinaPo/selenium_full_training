@@ -1,0 +1,131 @@
+package ru.stqa.training.selenium;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Created by gpodmorina on 01.11.2017.
+ */
+public class OpenAllPagesAdminLitecart extends TestBase {
+
+  @Test
+  public void openAllPagesAdminLitecart() {
+    wd.get("http://localhost/litecart/admin/");
+    wd.findElement(By.name("username")).click();
+    wd.findElement(By.name("username")).clear();
+    wd.findElement(By.name("username")).sendKeys("admin");
+    wd.findElement(By.name("password")).click();
+    wd.findElement(By.name("password")).clear();
+    wd.findElement(By.name("password")).sendKeys("admin");
+    wd.findElement(By.name("login")).click();
+    wd.findElement(By.linkText("Appearence")).click();
+    wd.findElement(By.linkText("Template")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Template')]")));
+    wd.findElement(By.linkText("Logotype")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Logotype')]")));
+    wd.findElement(By.linkText("Catalog")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Catalog')]")));
+    wd.findElement(By.linkText("Product Groups")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Product Groups')]")));
+    wd.findElement(By.linkText("Option Groups")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Option Groups')]")));
+    wd.findElement(By.linkText("Manufacturers")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Manufacturers')]")));
+    wd.findElement(By.linkText("Suppliers")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Suppliers')]")));
+    wd.findElement(By.linkText("Delivery Statuses")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Delivery Statuses')]")));
+    wd.findElement(By.linkText("Sold Out Statuses")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Sold Out Statuses')]")));
+    wd.findElement(By.linkText("Quantity Units")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Quantity Units')]")));
+    wd.findElement(By.linkText("CSV Import/Export")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'CSV Import/Export')]")));
+    wd.findElement(By.linkText("Countries")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Countries')]")));
+    wd.findElement(By.linkText("Currencies")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Currencies')]")));
+    wd.findElement(By.linkText("Customers")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Customers')]")));
+    wd.findElement(By.linkText("CSV Import/Export")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'CSV Import/Export')]")));
+    wd.findElement(By.linkText("Newsletter")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Newsletter')]")));
+    wd.findElement(By.linkText("Geo Zones")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Geo Zones')]")));
+    wd.findElement(By.linkText("Languages")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Languages')]")));
+    wd.findElement(By.linkText("Storage Encoding")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Storage Encoding')]")));
+    wd.findElement(By.linkText("Modules")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Job Modules')]")));
+    wd.findElement(By.linkText("Background Jobs")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Job Modules')]")));
+    wd.findElement(By.linkText("Customer")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Customer Modules')]")));
+    wd.findElement(By.linkText("Shipping")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Shipping Modules')]")));
+    wd.findElement(By.linkText("Payment")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Payment Modules')]")));
+    wd.findElement(By.linkText("Order Total")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Order Total Modules')]")));
+    wd.findElement(By.linkText("Order Success")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Order Success Modules')]")));
+    wd.findElement(By.linkText("Order Action")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Order Action Modules')]")));
+    wd.findElement(By.linkText("Orders")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Orders')]")));
+    wd.findElement(By.linkText("Order Statuses")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Order Statuses')]")));
+    wd.findElement(By.linkText("Pages")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Pages')]")));
+    wd.findElement(By.linkText("Reports")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Monthly Sales')]")));
+    wd.findElement(By.linkText("Monthly Sales")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Monthly Sales')]")));
+    wd.findElement(By.linkText("Most Sold Products")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Most Sold Products')]")));
+    wd.findElement(By.linkText("Most Shopping Customers")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Most Shopping Customers')]")));
+    wd.findElement(By.linkText("Settings")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Store Info")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Defaults")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("General")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Listings")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Images")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Checkout")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Advanced")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Security")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Settings')]")));
+    wd.findElement(By.linkText("Slides")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Slides')]")));
+    wd.findElement(By.linkText("Tax")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Tax Classes')]")));
+    wd.findElement(By.linkText("Tax Classes")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Tax Classes')]")));
+    wd.findElement(By.linkText("Tax Rates")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Tax Rates')]")));
+    wd.findElement(By.linkText("Translations")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Search Translations')]")));
+    wd.findElement(By.linkText("Search Translations")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Search Translations')]")));
+    wd.findElement(By.linkText("Scan Files")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Scan Files For Translations')]")));
+    wd.findElement(By.linkText("CSV Import/Export")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'CSV Import/Export')]")));
+    wd.findElement(By.linkText("Users")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'Users')]")));
+    wd.findElement(By.linkText("vQmods")).click();
+    assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1[contains(.,'vQmods')]")));
+  }
+}
