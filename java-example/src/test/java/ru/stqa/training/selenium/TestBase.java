@@ -29,7 +29,7 @@ public class TestBase {
 
   @Before
   public void start() {
-    wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla Firefox/firefox.exe"));
+    wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 
