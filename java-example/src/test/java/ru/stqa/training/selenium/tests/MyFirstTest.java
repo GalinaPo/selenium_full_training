@@ -1,13 +1,8 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +11,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 /**
  * Created by gpodmorina on 25.10.2017.
  */
-public class MyFirstTest extends TestBase{
+public class MyFirstTest extends TestBase {
 
 
   @Test

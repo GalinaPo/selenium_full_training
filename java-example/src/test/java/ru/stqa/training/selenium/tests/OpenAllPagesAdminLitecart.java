@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class OpenAllPagesAdminLitecart extends TestBase {
 
-  @Test
+  //@Test
   public void openAllPagesAdminLitecart() {
     wd.get("http://localhost/litecart/admin/");
     wd.findElement(By.name("username")).click();
@@ -27,7 +27,7 @@ public class OpenAllPagesAdminLitecart extends TestBase {
     for (int i=0; i < elements.size(); i++) {
       List<WebElement> el = wd.findElements(By.id("app-"));
       el.get(i).findElement(By.tagName("a")).click();
-      assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1")));
+      assertEquals(true, app.isElementPresent(By.xpath("//td[@id='content']//h1")));
       List<WebElement> el1 = wd.findElements(By.id("app-"));
       int count = 0;
       count = el1.get(i).findElements(By.xpath(".//ul[@class='docs']/li")).size();
@@ -35,7 +35,7 @@ public class OpenAllPagesAdminLitecart extends TestBase {
         for (int j=0; j < count; j++) {
           List<WebElement> els = wd.findElements(By.xpath(".//ul[@class='docs']/li"));
           els.get(j).findElement(By.tagName("a")).click();
-          assertEquals(true, isElementPresent(By.xpath("//td[@id='content']//h1")));
+          assertEquals(true, app.isElementPresent(By.xpath("//td[@id='content']//h1")));
         }
       }
     }

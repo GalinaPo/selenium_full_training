@@ -1,15 +1,13 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.tests;
 
 import com.google.common.io.Files;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.stqa.training.selenium.appmanager.ApplicationManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,17 +19,11 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
   //public EventFiringWebDriver wd;
+  public ApplicationManager app;
   public WebDriver wd;
   public WebDriverWait wait;
 
-  public boolean isElementPresent(By locator) {
-    try {
-      wd.findElement(locator);
-      return true;
-    } catch (NoSuchElementException ex) {
-      return false;
-    }
-  }
+
 
   public static class MyListener extends AbstractWebDriverEventListener {
     @Override
@@ -62,13 +54,12 @@ public class TestBase {
   public void start() {
     //wd = new EventFiringWebDriver(new ChromeDriver());
     //wd.register(new MyListener());
-    wd = new ChromeDriver();
-    wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    wait = new WebDriverWait(wd, 10);
+    app = new ApplicationManager();
   }
+
 
   @After
   public void stop() {
-    wd.quit();
+    app.quit();
   }
 }
